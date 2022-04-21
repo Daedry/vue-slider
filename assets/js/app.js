@@ -65,10 +65,10 @@ const app = new Vue({
 
         downImage(){
             console.log('down image')
+            this.activeImage++
             if(this.activeImage === this.country.length){
                 this.activeImage = 0;
             }
-            this.activeImage++
         }
     }
 }) 

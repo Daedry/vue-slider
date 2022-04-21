@@ -27,9 +27,9 @@
 
                 <div class="card-right">
                     <div class="slider">
-                        <img src="slide" class="slide" 
-                        v-for="(slide, index) in country[activeImage].image" 
-                        :class="activeImage === index ? 'active' : '' ">
+                        <img :src="slide.image" class="slide" 
+                        :class="activeImage === index ? 'active' : '' "
+                        v-for="(slide, index) in country" >
                     </div>
                     <div class="navigator">
                         <div class="up" @click="upImage">
