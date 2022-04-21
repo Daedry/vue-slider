@@ -21,3 +21,54 @@ in formato grande a sinistra e nel suo angolo in basso
 a destra dovranno essere aggiunti i relativi: - titolo e - testo.
 Allo stesso tempo nelle miniature l'immagine attiva dovrà apparire in evidenza rispetto alle altre.
 */
+
+const app = new Vue({
+    el: '#app',
+    data: {
+        activeImage: 0,
+       country: [
+            {
+                image: './assets/img/01.jpg',
+                title: 'Svezia',
+                text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+            },
+            {
+                image: './assets/img/02.jpg',
+                title: 'Svizzera',
+                text: 'Lorem ipsum.',
+            },
+            {
+                image: './assets/img/03.jpg',
+                title: 'Gran Bretagna',
+                text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+            },
+            {
+                image: './assets/img/04.jpg',
+                title: 'Germania',
+                text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.',
+            },
+            {
+                image: './assets/img/05.jpg',
+                title: 'Paradise',
+                text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
+            }
+        ],
+    },
+    methods: {
+        upImage(){
+            console.log('up image')
+            if(this.activeImage === 0){
+                this.activeImage = this.country.length;
+            }
+            this.activeImage--
+        },
+
+        downImage(){
+            console.log('down image')
+            if(this.activeImage === this.country.length){
+                this.activeImage = 0;
+            }
+            this.activeImage++
+        }
+    }
+}) 
