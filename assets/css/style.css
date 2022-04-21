@@ -46,7 +46,12 @@ img{
     height: 100%;
     display: flex;
     position: relative;
+    
 
+}
+
+.slide{
+    height: calc(100% / 5);
 }
 
 .active{
@@ -77,6 +82,8 @@ img{
 .navigator .down{
     bottom: 7px;
 }
+
+
 
 
 
